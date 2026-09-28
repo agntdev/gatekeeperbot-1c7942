@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Verify",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Confirm you're a real member to be unmuted"
+            }
+          }
+        ],
+        "send": {
+          "callback": "verify:tap"
+        }
+      }
+    ]
+  }
+]
