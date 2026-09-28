@@ -1,0 +1,13 @@
+[
+  {
+    "name": "/summary requires owner access",
+    "steps": [
+      {
+        "send": { "text": "/summary" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Owner access isn't set up yet." } }
+        ]
+      }
+    ]
+  }
+]

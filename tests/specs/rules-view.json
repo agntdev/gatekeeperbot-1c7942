@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Show the group's rules (editable by admins)"
+              "text": "Be kind, keep things on topic, and don’t post spam or harmful links."
             }
           }
         ],
