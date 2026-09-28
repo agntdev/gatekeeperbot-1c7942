@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Open moderation admin menu (warn, mute, kick, ban, trust, settings)"
+              "text": "Owner access isn't set up yet."
             }
           }
         ],

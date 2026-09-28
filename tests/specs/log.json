@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "View recent action log entries (paginated)"
+              "text": "Owner access isn't set up yet."
             }
           }
         ],

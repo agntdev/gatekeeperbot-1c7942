@@ -1,17 +1,14 @@
 import { Composer } from "grammy";
+import type { Ctx } from "../bot.js";
+import { inlineButton, inlineKeyboard, registerMainMenuItem } from "../toolkit/index.js";
+import { state } from "../moderation-state.js";
 
-// SCAFFOLD — generated from the bot blueprint BEFORE the agent runs.
-// Keep a LIVE registration (.command / .callbackQuery / …) so this feature is
-// never an empty stub. Replace the reply body with real logic + copy; if you
-// change the user-facing text, update tests/specs to match EXACTLY.
-// Do NOT rewrite src/bot.ts — buildBot() already auto-loads this module.
-// Menu: wire this into /start via registerMainMenuItem({ label: "View rules", data: "rules:view" }) if the toolkit exposes it.
-
-const composer = new Composer();
+registerMainMenuItem({ label: "📜 View rules", data: "rules:view", order: 20 });
+const composer = new Composer<Ctx>();
 
 composer.callbackQuery("rules:view", async (ctx) => {
   await ctx.answerCallbackQuery();
-  await ctx.reply("Show the group's rules (editable by admins)");
+  await ctx.reply(state(ctx).settings.rulesText, { reply_markup: inlineKeyboard([[inlineButton("⬅️ Back to menu", "menu:main")]]) });
 });
 
 export default composer;

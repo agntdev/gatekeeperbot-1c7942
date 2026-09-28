@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Confirm you're a real member to be unmuted"
+              "text": "You’re verified — welcome in!"
             }
           }
         ],
