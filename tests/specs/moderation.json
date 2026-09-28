@@ -1,0 +1,20 @@
+[
+  {
+    "name": "/moderation",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Open moderation admin menu (warn, mute, kick, ban, trust, settings)"
+            }
+          }
+        ],
+        "send": {
+          "text": "/moderation"
+        }
+      }
+    ]
+  }
+]
